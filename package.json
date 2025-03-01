@@ -11,6 +11,6 @@
     },
     "dependencies": {},
     "devDependencies": {
-      "electron": "20.0.2"
+      "electron": "latest"
     }
   }

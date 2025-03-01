@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/e80b2972-ca90-4901-8d2a-0c76195eff1e
 
 2. Install dependencies
 ```bash
-yarn install
+ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/" yarn install
 # or
 npm install
 ```
