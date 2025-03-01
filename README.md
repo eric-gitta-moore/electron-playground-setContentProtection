@@ -4,6 +4,8 @@
 
 This is an Electron-based screen sharing demo project that demonstrates how to implement screen capture and content protection features in an Electron application.
 
+https://github.com/user-attachments/assets/e80b2972-ca90-4901-8d2a-0c76195eff1e
+
 ## Features
 
 - Screen Capture: Implement screen content capture using the `desktopCapturer` API
