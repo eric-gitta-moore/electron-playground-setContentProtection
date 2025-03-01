@@ -9,6 +9,7 @@ This is an Electron-based screen sharing demo project that demonstrates how to i
 - Screen Capture: Implement screen content capture using the `desktopCapturer` API
 - Content Protection: Implement window content protection through `setContentProtection`
 - Multi-window Support: Ability to open a second protected window
+- Disabled Features: `IOSurfaceCapturer,DesktopCaptureMacV2`, preventing self-window content capture
 
 ## Tech Stack
 
