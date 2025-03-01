@@ -1,61 +1,63 @@
 # Electron Screen Share Demo
 
-这是一个基于Electron的屏幕共享演示项目，展示了如何在Electron应用中实现屏幕捕获和内容保护功能。
+[English](README.md) | [中文](README.cn.md)
 
-## 功能特点
+This is an Electron-based screen sharing demo project that demonstrates how to implement screen capture and content protection features in an Electron application.
 
-- 屏幕捕获：使用`desktopCapturer` API实现屏幕内容捕获
-- 内容保护：通过`setContentProtection`实现窗口内容保护
-- 多窗口支持：可以打开第二个受保护的窗口
+## Features
 
-## 技术栈
+- Screen Capture: Implement screen content capture using the `desktopCapturer` API
+- Content Protection: Implement window content protection through `setContentProtection`
+- Multi-window Support: Ability to open a second protected window
+
+## Tech Stack
 
 - Electron 20.0.2
 - Node.js
 
-## 安装
+## Installation
 
-1. 克隆项目到本地
+1. Clone the project locally
 
-2. 安装依赖
+2. Install dependencies
 ```bash
 yarn install
-# 或
+# or
 npm install
 ```
 
-## 运行
+## Running
 
 ```bash
 yarn start
-# 或
+# or
 npm start
 ```
 
-## 项目结构
+## Project Structure
 
-- `main.js`: 主进程文件，负责创建窗口和处理IPC通信
-- `preload.js`: 预加载脚本，用于暴露安全的API到渲染进程
-- `renderer.js`: 渲染进程脚本，实现屏幕捕获逻辑
-- `index.html`: 主窗口的HTML文件
+- `main.js`: Main process file, responsible for creating windows and handling IPC communication
+- `preload.js`: Preload script, used to expose secure APIs to the renderer process
+- `renderer.js`: Renderer process script, implements screen capture logic
+- `index.html`: Main window HTML file
 
-## 实现细节
+## Implementation Details
 
-### 内容保护
+### Content Protection
 
-项目使用`setContentProtection(true)`来防止窗口内容被其他应用捕获或录制。这个功能在主窗口和第二个窗口中都已启用。
+The project uses `setContentProtection(true)` to prevent window content from being captured or recorded by other applications. This feature is enabled in both the main window and the second window.
 
-### 屏幕捕获
+### Screen Capture
 
-使用`desktopCapturer.getSources()`获取可用的屏幕源，并通过`navigator.mediaDevices.getUserMedia`实现屏幕内容捕获。
+Uses `desktopCapturer.getSources()` to get available screen sources and implements screen content capture through `navigator.mediaDevices.getUserMedia`.
 
-### 安全性
+### Security
 
-- 使用预加载脚本和上下文隔离确保安全性
-- 通过IPC通信实现主进程和渲染进程之间的安全通信
-- 实现了内容安全策略(CSP)来防止XSS攻击
+- Uses preload scripts and context isolation to ensure security
+- Implements secure communication between main and renderer processes through IPC
+- Implements Content Security Policy (CSP) to prevent XSS attacks
 
-## 注意事项
+## Notes
 
-1. 项目禁用了IOSurfaceCapturer和DesktopCaptureMacV2特性
-2. 内容保护功能的效果可能因操作系统而异
+1. The project disables IOSurfaceCapturer and DesktopCaptureMacV2 features
+2. The effectiveness of content protection may vary depending on the operating system
