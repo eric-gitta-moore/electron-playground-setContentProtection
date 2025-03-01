@@ -4,6 +4,8 @@
 
 这是一个基于Electron的屏幕共享演示项目，展示了如何在Electron应用中实现屏幕捕获和内容保护功能。
 
+https://github.com/user-attachments/assets/e80b2972-ca90-4901-8d2a-0c76195eff1e
+
 ## 功能特点
 
 - 屏幕捕获：使用 `desktopCapturer` API实现屏幕内容捕获
